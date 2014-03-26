@@ -56,7 +56,20 @@ double StopWatch::convertToDouble(const timeval &r) {
     return result;
 }
 /////////////////////////////////////////////////
+double StopWatch::timeInMicros() {
+    timeval now;
+
+    gettimeofday(&now, NULL);
+
+    return (now.tv_usec - t.tv_usec) + ((now.tv_sec - t.tv_sec) * 1000000);
+}
+/////////////////////////////////////////////////
+double StopWatch::timeInMillis() {
+    return timeInMicros() / 1000.0;
+}
+/////////////////////////////////////////////////
 StopWatch::~StopWatch() {
 
 }
 /////////////////////////////////////////////////
+// vim: ts=4:sw=4:expandtab

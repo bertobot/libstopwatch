@@ -49,6 +49,16 @@ class StopWatch {
 	 */
         double timeSoFar();
 
+	/**
+	 * returns the elapsed time in milliseconds since start() was called.
+	 */
+	double timeInMillis();
+
+	/**
+	 * returns the elapsed time in microseconds since start() was called.
+	 */
+	double timeInMicros();
+
         bool isStarted();
 
         virtual ~StopWatch();
