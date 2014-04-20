@@ -3,6 +3,7 @@ libstopwatch - a timer object in C++ that provides hi-res timer.
 
 ```c++
 #include <iostream>
+#include <stopwatch/StopWatch.h>
 
 int main() {
 	StopWatch sw;
